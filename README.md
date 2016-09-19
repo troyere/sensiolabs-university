@@ -327,3 +327,11 @@ contact:
 ### If the user tries to display the page by typing http://domain.name/contact with his regular Chrome browser, does he/she will have a 404 response?
 Yes
 > http://symfony.com/doc/2.6/book/routing.html#completely-customized-route-matching-with-conditions
+
+***
+
+### Is the translation activated by default?
+No
+> http://symfony.com/doc/current/book/translation.html#configuration
+
+***

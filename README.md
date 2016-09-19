@@ -416,8 +416,7 @@ class Article
     public string $title;
 }
 ```
-No
-__Note:__ there is a pending RFC to add this feature to future PHP versions. See details
+No - __Note:__ there is a pending RFC to add this feature to future PHP versions. See details :
 > http://php.net/manual/en/language.oop5.properties.php
 
 ***

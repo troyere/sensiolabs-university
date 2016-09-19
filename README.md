@@ -345,3 +345,29 @@ No
 > http://symfony.com/doc/current/form/disabling_validation.html
 
 ***
+
+### Which type does not correspond to a button?
+- reset
+- button
+- ~~input~~
+- submit
+ 
+***
+
+### What is the default domain for form label?
+messages
+> http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+
+***
+
+### Which of theses are not options available in every FormType?
+- by_reference
+- trim
+- compound
+- ~~attributes~~
+- action
+- ~~is_required~~ (required)
+
+> http://symfony.com/doc/current/reference/forms/types/form.html
+
+***

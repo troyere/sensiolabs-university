@@ -436,3 +436,41 @@ __Note:__ raw must be used before the other filters
 > http://twig.sensiolabs.org/doc/filters/raw.html
 
 ***
+
+### How can you get the HTTP client user-agent?
+$_SERVER['HTTP_USER_AGENT'];
+> http://php.net/manual/en/reserved.variables.server.php
+
+*** 
+
+### Which of the following are Filesystem methods?
+- remove
+- ~~move~~
+- makePathRelative
+- isAbsolutePath
+- exists
+- symlink
+
+> http://symfony.com/doc/current/components/filesystem/introduction.html#usage
+> 
+> https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Filesystem/Filesystem.php
+
+***
+
+### Which of the following will not be correctly encoded by the JSON extension?
+- array(array("foo"=>"bar"))
+- 'foo bar'
+- ~~function () {alert("foo");}~~
+- new SomeClass('some string')
+
+> http://php.net/manual/en/book.json.php
+
+*** 
+
+### What will be the output of the following code?
+```php
+$a = (object) ["a" => "b"]; 
+$b = (object) ["a" => "c"]; 
+echo $a <=> $b;
+```
+

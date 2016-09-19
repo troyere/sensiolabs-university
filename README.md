@@ -130,7 +130,6 @@ $tab = array('foo', 'key' => 'bar', 'baz', 36);
 - ~~$tab[shuffle($tab)]~~
 - ~~array_rand($tab)~~
 
-__TODO :: QUESTIONNER MANAGERS__
 > http://php.net/manual/en/function.array-flip.php
 >
 > http://php.net/manual/en/function.array-rand.php

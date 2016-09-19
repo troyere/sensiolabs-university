@@ -301,3 +301,18 @@ public function load($resource, $locale, $domain = 'messages');
 > http://symfony.com/doc/current/components/translation/custom_formats.html
 
 ***
+
+### Can you configure your routes in PHP?
+Yes
+> http://symfony.com/doc/current/routing.html#routing-examples
+
+*** 
+
+### What does the affirmative strategy of AccessDecisionManager?
+- ~~Grant access if there are more voters granting access than there are denying.~~ (consensus)
+- Grant access as soon as there is one voter granting access.
+- ~~Only grant access if none of the voters has denied access.~~ (unanimous)
+
+> http://symfony.com/doc/current/components/security/authorization.html#access-decision-manager
+
+***

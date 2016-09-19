@@ -370,3 +370,25 @@ messages
 > http://symfony.com/doc/current/reference/forms/types/form.html
 
 ***
+
+### What are the ways to retrieve the Request in an action?
+- Add a type-hinted argument, object of type Request, to the action.
+- Add the @Request annotation on the action.
+- Get the service request via the Container.
+```php
+$this->get('request');
+```
+- Via a call to the request_stack service:
+```php
+$this->get('request_stack')->getCurrentRequest();
+```
+- Via a call to the routing service:
+```php
+$this->get('router')->getRequest();
+```
+
+> http://symfony.com/doc/current/book/controller.html#the-request-object-as-a-controller-argument
+> 
+> http://symfony.com/doc/current/book/service_container.html#accessing-the-request-in-a-service
+> 
+> http://symfony.com/doc/master/service_container/request.html

@@ -316,3 +316,14 @@ Yes
 > http://symfony.com/doc/current/components/security/authorization.html#access-decision-manager
 
 ***
+
+### Considering the following declaration of route in YAML:
+```yaml
+contact:
+    path:     /contact
+    defaults: { _controller: AppBundle:Default:test }
+    condition: "context.getMethod() in ['GET', 'HEAD'] and request.headers.get('User-Agent') matches '/firefox/i'"
+```
+### If the user tries to display the page by typing http://domain.name/contact with his regular Chrome browser, does he/she will have a 404 response?
+Yes
+> http://symfony.com/doc/3.0/book/routing.html#completely-customized-route-matching-with-conditions

@@ -127,7 +127,7 @@ $tab = array('foo', 'key' => 'bar', 'baz', 36);
 - ~~array_rand(array_flip($tab))~~
 - ~~array_shuffle($tab)~~
 - $tab[array_rand($tab)]
-- $tab[shuffle($tab)]
+- ~~$tab[shuffle($tab)]~~
 - ~~array_rand($tab)~~
 
 __TODO :: QUESTIONNER MANAGERS__

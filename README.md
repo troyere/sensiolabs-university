@@ -421,3 +421,18 @@ No - __Note:__ there is a pending RFC to add this feature to future PHP versions
 
 ***
 
+### What will be the last version of Symfony 3?
+3.4
+> http://symfony.com/roadmap?version=3.8#checker
+
+***
+
+### Among the following which ones are escaped?
+- {{ var|raw|upper }}
+- ~~{{ var|upper|raw }}~~
+- {{ var|raw~bar }}
+
+__Note:__ raw must be used before the other filters
+> http://twig.sensiolabs.org/doc/filters/raw.html
+
+***

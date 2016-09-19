@@ -390,3 +390,35 @@ $this->get('router')->getRequest();
 > http://symfony.com/doc/current/book/controller.html#the-request-object-as-a-controller-argument
 > 
 > http://symfony.com/doc/master/service_container/request.html
+
+***
+
+### What two caching models define the HTTP specification?
+- Validation model
+- ~~Confirmation model~~
+- Expiration model
+- ~~Invalidation model~~
+
+> https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html
+
+***
+
+### Is it possible to pass a Response instance to the Symfony\Bundle\FrameworkBundle\Controller\Controller::render() method?
+Yes
+
+***
+
+### Is the following code valid?
+```php
+<?php
+class Article
+{
+    public string $title;
+}
+```
+No
+__Note:__ there is a pending RFC to add this feature to future PHP versions. See details
+> http://php.net/manual/en/language.oop5.properties.php
+
+***
+

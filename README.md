@@ -335,3 +335,13 @@ No
 > http://symfony.com/doc/current/book/translation.html#configuration
 
 ***
+
+### How can you disable the validation in a form?
+- ~~With the no_validation option set to true~~
+- ~~By calling isValid(false)~~
+- ~~By not calling isValid()~~
+- With the validation_groups option set to false
+
+> http://symfony.com/doc/current/form/disabling_validation.html
+
+***

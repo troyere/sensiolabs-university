@@ -374,7 +374,7 @@ messages
 ### What are the ways to retrieve the Request in an action?
 - Add a type-hinted argument, object of type Request, to the action.
 - ~~Add the @Request annotation on the action.~~
-- Get the service request via the Container.
+- ~~Get the service request via the Container.~~
 ```php
 $this->get('request');
 ```

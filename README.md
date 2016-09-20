@@ -292,6 +292,8 @@ $resolver->isDefined('username');
 - ~~$resolver->setDefault('username');~~
 
 > http://symfony.com/doc/current/components/options_resolver.html#options-without-default-values
+> 
+> https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/OptionsResolver.php#L316-L340
 
 ***
 

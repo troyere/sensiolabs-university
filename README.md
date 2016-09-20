@@ -473,6 +473,13 @@ $a = (object) ["a" => "b"];
 $b = (object) ["a" => "c"]; 
 echo $a <=> $b;
 ```
+- ~~0~~
+- ~~1~~
+- -1
+
+> http://php.net/manual/en/language.operators.comparison.php
+> 
+> http://stackoverflow.com/questions/30365346/what-is-the-spaceship-operator-in-php-7#answer-30365399
 
 *** 
 

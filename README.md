@@ -489,4 +489,11 @@ The name of the file to look for.
 
 ***
 
+### What is the name of the service that check authorization?
+security.authorization_checker
+> http://symfony.com/blog/new-in-symfony-2-6-security-component-improvements
+
+***
+
+
 

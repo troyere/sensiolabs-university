@@ -474,3 +474,12 @@ $b = (object) ["a" => "c"];
 echo $a <=> $b;
 ```
 
+*** 
+
+### What is the first argument of the Symfony\Component\Config\FileLocator::locate method?
+The name of the file to look for.
+> http://symfony.com/doc/current/components/config/resources.html#locating-resources
+
+***
+
+

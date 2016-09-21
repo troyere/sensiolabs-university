@@ -497,5 +497,44 @@ security.authorization_checker
 
 ***
 
+### Which of theses is the correct way to use the Security annotation to secure a Controller with the ROLE_ADMIN?
+@Security("has_role('ROLE_ADMIN')")
+> http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/security.html
 
+***
+
+### With the following code:
+```php
+use Acme\Person;
+
+$person1 = new Person();
+$person1->setName('foo');
+$person1->setAge(99);
+$person1->setSportsman(false);
+
+$person2 = new Person();
+$person2->setName('bar');
+$person2->setAge(33);
+$person2->setSportsman(true);
+
+$persons = array($person1, $person2);
+$data = $serializer->serialize($persons, 'json');
+```
+### what is the correct way to deserialize the $data into an $persons array of Acme\Person objects?
+```php
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+use Symfony\Component\Serializer\Serializer;
+
+$serializer = new Serializer(
+    array(new GetSetMethodNormalizer(), new ArrayDenormalizer()),
+    array(new JsonEncoder())
+);
+
+$persons = $serializer->deserialize($data, 'Acme\Person[]', 'json');
+```
+> http://symfony.com/doc/3.0/components/serializer.html#handling-arrays
+
+*** 
 

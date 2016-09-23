@@ -607,4 +607,114 @@ Debug::enable();
 
 ***
 
+### What is the purpose of the logging: true option in the translator config?
+Log a message when Symfony doesn't find a translation for the given locale.
+> http://symfony.com/doc/current/reference/configuration/framework.html#logging
+
+*** 
+
+### Is it possible to add a listener to several events?
+Yes
+> http://symfony.com/doc/current/components/event_dispatcher/introduction.html#connecting-listeners
+
+***
+
+### What is the way to destroy a variable in a PHP session?
+- unset() on the variable in $_SESSION
+- ~~session_destroy()~~
+- ~~session_unset()~~
+- ~~unset() on the variable in $HTTP_SESSION_VARS~~
+
+> http://php.net/manual/en/function.unset.php
+> 
+> http://php.net/manual/en/function.session-destroy.php
+> 
+> http://php.net/manual/en/function.session-unset.php
+> 
+> http://php.net/manual/en/reserved.variables.session.php
+
+***
+
+### How you validate an object but only against a subset of the constraints ?
+Using validation groups.
+> http://symfony.com/doc/current/validation/groups.html
+
+***
+
+### Which attributes are reserved special routing parameters?
+Answer : 
+- _locale
+- ~~_type~~
+- ~~_response~~
+- _format
+- _controller
+
+> http://symfony.com/doc/current/routing.html#routing-format-param
+
+***
+
+### When using HTTP basic, how does the server starts the authentication process?
+Sending the WWW-Authenticate HTTP header with the HTTP 401 Not Authorized status code.
+
+*** 
+
+### What will be the output of the following code?
+```php
+<?php
+function foo($y)
+{
+    return function($x) use ($y) {
+        return str_repeat($y, $x);
+    };
+}
+$a = foo(3);
+$b = foo(2);
+echo $a(2), $b(3);
+```
+Answer : 33222
+> http://php.net/manual/en/functions.anonymous.php
+
+*** 
+
+### With the following code:
+```php
+<?php
+// ...
+class Mailer
+{
+    // ...
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        // ...
+        $resolver->setDefault('encryption', null);
+
+        $resolver->setDefault('port', function () {
+            if ('ssl' === $options['encryption']) {
+                return 465;
+            }
+
+            return 25;
+        });
+    }
+}
+```
+### what would be the resolved $options passed as:
+```php
+$options = array('encryption' => 'SSL');
+```
+Answer : 
+```php
+$options = array(
+    'encryption' => 'SSL',
+    'port' => function () {
+            if ('ssl' === $options['encryption']) {
+                return 465;
+            }
+
+            return 25;
+        },
+);
+```
+> http://symfony.com/doc/current/components/options_resolver.html#default-values-that-depend-on-another-option
+
 

@@ -276,7 +276,7 @@ Answer :
 - 3.2
 - 3.3
 - 3.1
-- 3.4
+- ~~3.4~~ (LTS)
 - 3.0
 
 > http://symfony.com/doc/current/contributing/community/releases.html#standard-versions

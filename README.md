@@ -538,3 +538,56 @@ $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json');
 
 *** 
 
+### What is the default domain for validation message?
+- ~~messages~~
+- ~~validation~~
+- validators
+- ~~default~~
+- ~~validator~~
+
+> http://symfony.com/doc/current/reference/configuration/framework.html#translation-domain
+
+***
+
+### Which Symfony component is used in the asset Twig function Symfony\Bridge\Twig\Extension\AssetExtension?
+- Asset
+- ~~Gulp~~
+- ~~CssSelector~~
+- ~~Assetic~~
+
+> http://symfony.com/doc/current/reference/twig_reference.html#asset
+> 
+> http://api.symfony.com/3.1/Symfony/Bridge/Twig/Extension/AssetExtension.html
+
+*** 
+
+### What is the command to check the Symfony requirements?
+bin/symfony_requirements
+> http://symfony.com/doc/current/deployment.html#a-check-requirements
+
+***
+
+### What is the filename of the template to create a custom 404 error page?
+app/Resources/TwigBundle/views/Exception/error404.html.twig
+> http://symfony.com/doc/current/cookbook/controller/error_pages.html
+
+***
+
+### Is the following definition of route correct?
+```php
+use Symfony\Component\Routing\RouteCollection;
+use Symfony\Component\Routing\Route;
+
+$collection->add('blog_show', new Route('/blog/{page}/category/{slug}/{page}', array(
+  '_controller' => 'AppBundle:Blog:show',
+)));
+
+return $collection;
+```
+No
+An exception is thrown : Route pattern "/blob/{page}/category/{slug}/{page}" cannot reference variable name "page" more than once.
+> https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Routing/RouteCompiler.php#L128
+
+***
+
+

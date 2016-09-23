@@ -591,4 +591,20 @@ An exception is thrown : Route pattern "/blob/{page}/category/{slug}/{page}" can
 
 ***
 
+### What is the default status code of a Symfony\Component\HttpFoundation\RedirectResponse object?
+302
+> https://www.wikiwand.com/fr/Liste_des_codes_HTTP#/Redirection
+
+***
+
+### What is the correct code to activate the tools to help you debug PHP code?
+```php
+use Symfony\Component\Debug\Debug;
+
+Debug::enable();
+```
+> http://symfony.com/doc/current/components/debug/introduction.html#usage
+
+***
+
 

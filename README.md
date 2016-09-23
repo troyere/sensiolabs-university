@@ -7,7 +7,7 @@ _locale
 ***
 
 ### When declaring a route in PHP, what is the 4th argument of the constructor of the Route class?
-An array of options.
+Answer : An array of options.
 > http://symfony.com/doc/current/components/routing.html#defining-routes
 >
 > https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Routing/Route.php#L75-L82
@@ -15,7 +15,10 @@ An array of options.
 ***
 
 ### How to get the current route name from Twig?
+Answer : 
+```twig
 {{ app.request.attributes._route }}
+```
 
 ***
 
@@ -30,12 +33,13 @@ public function indexAction(
     return new Response((string) $errors);
 }
 ```
-An empty string
+Answer : An empty string
 > https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Validator/ConstraintViolationList.php#L38-L52
 
 ***
 
 ### Which of the followings are not validation constraints?
+Answer : 
 - ~~Password~~ (UserPassword)
 - File
 - ~~Search~~
@@ -59,7 +63,7 @@ $foo->value = 2;
 
 echo $myValue;
 ```
-2
+Answer : 2
 > http://php.net/manual/en/language.references.php
 >
 > http://php.net/manual/fr/language.references.return.php
@@ -80,6 +84,7 @@ echo $myValue;
 ***
 
 ### Which Dumper is not available in the VarDumper component?
+Answer : 
 - HtmlDumper
 - ~~HttpDumper~~
 - CliDumper
@@ -98,12 +103,15 @@ echo $myValue;
 ***
 
 ### Can interfaces define constants in PHP?
-Yes
+Answer : Yes
 
 ***
 
 ### What is the config option of web_profiler to display a debug page of a RedirectResponse?
+Answer : 
+```yaml
 intercept_redirects: true
+```
 > http://symfony.com/doc/current/reference/configuration/web_profiler.html#full-default-configuration
 > 
 > http://symfony.com/doc/current/cookbook/email/dev_environment.html#viewing-from-the-web-debug-toolbar
@@ -115,7 +123,7 @@ intercept_redirects: true
 <?php
 echo count(explode ('/', '///'));
 ```
-4
+Answer : 4
 > http://php.net/manual/en/function.explode.php
 
 *** 
@@ -124,6 +132,7 @@ echo count(explode ('/', '///'));
 ```php
 $tab = array('foo', 'key' => 'bar', 'baz', 36);
 ```
+Answer : 
 - ~~array_rand(array_flip($tab))~~
 - ~~array_shuffle($tab)~~
 - $tab[array_rand($tab)]
@@ -139,7 +148,10 @@ $tab = array('foo', 'key' => 'bar', 'baz', 36);
 ***
 
 ### Which of theses are the way to add the Cache-Control: public,s-maxage=900 HTTP response header on a Symfony\Component\HttpFoundation\Response object?
+Answer : 
+```php
 $response->setSharedMaxAge(900);
+```
 > http://symfony.com/doc/current/book/http_cache.html#expiration-with-the-cache-control-header
 > 
 > http://symfony.com/doc/current/http_cache/expiration.html
@@ -149,6 +161,7 @@ $response->setSharedMaxAge(900);
 ***
 
 ### When is executed the Symfony\Component\Console\Command::interact method?
+Answer : 
 - ~~Before Symfony\Component\Console\Command::initialize method.~~
 - Before the InputDefinition is validated.
 - After Symfony\Component\Console\Command::initialize method.
@@ -164,12 +177,13 @@ The InputDefinition is bound first, and its validation starts after Symfony\Comp
 ***
 
 ### Does the order of the controller arguments matter when mapping route parameters to controller arguments?
-No
+Answer : No
 > http://symfony.com/doc/current/controller.html#the-request-object-as-a-controller-argument
 
 ***
 
 ### How to get information on the route foobar of an application?
+Answer : 
 - bin/console debug:router foobar
 - ~~bin/check.php foobar~~
 - ~~It is not possible to do this.~~
@@ -181,7 +195,7 @@ No
 ***
 
 ### Following best practices, where should be stored a Bundle documentation?
-Acme/Bundle/DemoBundle/Resources/doc/
+Answer : Acme/Bundle/DemoBundle/Resources/doc/
 > http://symfony.com/doc/current/bundles/best_practices.html#documentation
 
 ***
@@ -196,13 +210,16 @@ With the following declaration of route:
       </routes>
 ```
 ### What is displayed if the current scheme is http?
-https://domain.name/
+Answer : https://domain.name/
 > http://symfony.com/doc/current/templating.html#linking-to-pages
 
 ***
 
 ### How can you add an option named my_option without setting a default value?
+Answer : 
+```php
 $resolver->setDefined('my_option');
+```
 > http://symfony.com/doc/current/components/options_resolver.html#options-without-default-values
 
 ***
@@ -213,7 +230,7 @@ $resolver->setDefined('my_option');
 $a = array('foo', 'bar' => 'baz', array('foobar', 'baz'));
 echo count($a, true);
 ```
-5
+Answer : 5
 > http://php.net/manual/en/function.count.php
 
 ***
@@ -233,7 +250,7 @@ class HelloController
     }
 }
 ```
-hello 2
+Answer : hello 2
 > http://symfony.com/doc/current/cookbook/templating/render_without_controller.html
 > 
 > https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/TemplateController.php#L27-L57
@@ -243,6 +260,7 @@ hello 2
 ***
 
 ### What is the way to enable magic __call method?
+Answer : 
 ```php
 $accessor = PropertyAccess::createPropertyAccessorBuilder()
     ->enableMagicCall()
@@ -254,6 +272,7 @@ $accessor = PropertyAccess::createPropertyAccessorBuilder()
 ***
 
 ### Which of these are Standard (not Long Term Support) Versions of Symfony?
+Answer : 
 - 3.2
 - 3.3
 - 3.1
@@ -267,7 +286,7 @@ $accessor = PropertyAccess::createPropertyAccessorBuilder()
 ***
 
 ### What does the 308 HTTP status code stand for?
-Permanent redirect
+Answer : Permanent redirect
 > https://www.wikiwand.com/fr/Liste_des_codes_HTTP#/Redirection
 
 *** 
@@ -277,7 +296,7 @@ Permanent redirect
 $event = new OrderPlacedEvent($order);
 $dispatcher->dispatch('bar.event', $event);
 ```
-$event
+Answer : $event
 > http://symfony.com/doc/2.3/components/event_dispatcher/introduction.html#dispatcher-shortcuts
 
 ***
@@ -286,6 +305,7 @@ $event
 ```php
 $resolver->isDefined('username');
 ```
+Answer : 
 - $resolver->setDefined('username');
 - $resolver->setRequired('username');
 - $resolver->setDefined(array('username'));
@@ -298,18 +318,22 @@ $resolver->isDefined('username');
 ***
 
 ### Which method must implement a TranslationLoader that implements Symfony\Component\Translation\Loader\LoaderInterface?
+Answer : 
+```php
 public function load($resource, $locale, $domain = 'messages');
+```
 > http://symfony.com/doc/current/components/translation/custom_formats.html
 
 ***
 
 ### Can you configure your routes in PHP?
-Yes
+Answer : Yes
 > http://symfony.com/doc/current/routing.html#routing-examples
 
 *** 
 
 ### What does the affirmative strategy of AccessDecisionManager?
+Answer : 
 - ~~Grant access if there are more voters granting access than there are denying.~~ (consensus)
 - Grant access as soon as there is one voter granting access.
 - ~~Only grant access if none of the voters has denied access.~~ (unanimous)
@@ -326,18 +350,19 @@ contact:
     condition: "context.getMethod() in ['GET', 'HEAD'] and request.headers.get('User-Agent') matches '/firefox/i'"
 ```
 ### If the user tries to display the page by typing http://domain.name/contact with his regular Chrome browser, does he/she will have a 404 response?
-Yes
+Answer : Yes
 > http://symfony.com/doc/2.6/book/routing.html#completely-customized-route-matching-with-conditions
 
 ***
 
 ### Is the translation activated by default?
-No
+Answer : No
 > http://symfony.com/doc/current/book/translation.html#configuration
 
 ***
 
 ### How can you disable the validation in a form?
+Answer : 
 - ~~With the no_validation option set to true~~
 - ~~By calling isValid(false)~~
 - ~~By not calling isValid()~~
@@ -348,6 +373,7 @@ No
 ***
 
 ### Which type does not correspond to a button?
+Answer : 
 - reset
 - button
 - ~~input~~
@@ -356,12 +382,13 @@ No
 ***
 
 ### What is the default domain for form label?
-messages
+Answer : messages
 > http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
 
 ***
 
 ### Which of theses are not options available in every FormType?
+Answer : 
 - by_reference
 - trim
 - compound
@@ -374,6 +401,7 @@ messages
 ***
 
 ### What are the ways to retrieve the Request in an action?
+Answer : 
 - Add a type-hinted argument, object of type Request, to the action.
 - ~~Add the @Request annotation on the action.~~
 - ~~Get the service request via the Container.~~
@@ -396,6 +424,7 @@ $this->get('router')->getRequest();
 ***
 
 ### What two caching models define the HTTP specification?
+Answer : 
 - Validation model
 - ~~Confirmation model~~
 - Expiration model
@@ -406,7 +435,7 @@ $this->get('router')->getRequest();
 ***
 
 ### Is it possible to pass a Response instance to the Symfony\Bundle\FrameworkBundle\Controller\Controller::render() method?
-Yes
+Answer : Yes
 
 ***
 
@@ -418,18 +447,19 @@ class Article
     public string $title;
 }
 ```
-No - __Note:__ there is a pending RFC to add this feature to future PHP versions. See details :
+Answer : No - __Note:__ there is a pending RFC to add this feature to future PHP versions. See details :
 > http://php.net/manual/en/language.oop5.properties.php
 
 ***
 
 ### What will be the last version of Symfony 3?
-3.4
+Answer : 3.4
 > http://symfony.com/roadmap?version=3.8#checker
 
 ***
 
 ### Among the following which ones are escaped?
+Answer : 
 - {{ var|raw|upper }}
 - ~~{{ var|upper|raw }}~~
 - {{ var|raw~bar }}
@@ -440,12 +470,16 @@ __Note:__ raw must be used before the other filters
 ***
 
 ### How can you get the HTTP client user-agent?
+Answer : 
+```php
 $_SERVER['HTTP_USER_AGENT'];
+```
 > http://php.net/manual/en/reserved.variables.server.php
 
 *** 
 
 ### Which of the following are Filesystem methods?
+Answer : 
 - remove
 - ~~move~~
 - makePathRelative
@@ -460,6 +494,7 @@ $_SERVER['HTTP_USER_AGENT'];
 ***
 
 ### Which of the following will not be correctly encoded by the JSON extension?
+Answer : 
 - array(array("foo"=>"bar"))
 - 'foo bar'
 - ~~function () {alert("foo");}~~
@@ -475,6 +510,7 @@ $a = (object) ["a" => "b"];
 $b = (object) ["a" => "c"]; 
 echo $a <=> $b;
 ```
+Answer : 
 - ~~0~~
 - ~~1~~
 - -1
@@ -486,19 +522,19 @@ echo $a <=> $b;
 *** 
 
 ### What is the first argument of the Symfony\Component\Config\FileLocator::locate method?
-The name of the file to look for.
+Answer : The name of the file to look for.
 > http://symfony.com/doc/current/components/config/resources.html#locating-resources
 
 ***
 
 ### What is the name of the service that check authorization?
-security.authorization_checker
+Answer : security.authorization_checker
 > http://symfony.com/blog/new-in-symfony-2-6-security-component-improvements
 
 ***
 
 ### Which of theses is the correct way to use the Security annotation to secure a Controller with the ROLE_ADMIN?
-@Security("has_role('ROLE_ADMIN')")
+Answer : @Security("has_role('ROLE_ADMIN')")
 > http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/security.html
 
 ***
@@ -521,6 +557,7 @@ $persons = array($person1, $person2);
 $data = $serializer->serialize($persons, 'json');
 ```
 ### what is the correct way to deserialize the $data into an $persons array of Acme\Person objects?
+Answer : 
 ```php
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
@@ -539,6 +576,7 @@ $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json');
 *** 
 
 ### What is the default domain for validation message?
+Answer : 
 - ~~messages~~
 - ~~validation~~
 - validators
@@ -550,6 +588,7 @@ $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json');
 ***
 
 ### Which Symfony component is used in the asset Twig function Symfony\Bridge\Twig\Extension\AssetExtension?
+Answer : 
 - Asset
 - ~~Gulp~~
 - ~~CssSelector~~
@@ -562,13 +601,13 @@ $persons = $serializer->deserialize($data, 'Acme\Person[]', 'json');
 *** 
 
 ### What is the command to check the Symfony requirements?
-bin/symfony_requirements
+Answer : bin/symfony_requirements
 > http://symfony.com/doc/current/deployment.html#a-check-requirements
 
 ***
 
 ### What is the filename of the template to create a custom 404 error page?
-app/Resources/TwigBundle/views/Exception/error404.html.twig
+Answer : app/Resources/TwigBundle/views/Exception/error404.html.twig
 > http://symfony.com/doc/current/cookbook/controller/error_pages.html
 
 ***
@@ -584,20 +623,19 @@ $collection->add('blog_show', new Route('/blog/{page}/category/{slug}/{page}', a
 
 return $collection;
 ```
-No
-
-An exception is thrown : Route pattern "/blob/{page}/category/{slug}/{page}" cannot reference variable name "page" more than once.
+Answer : No - __An exception is thrown__ : Route pattern "/blob/{page}/category/{slug}/{page}" cannot reference variable name "page" more than once.
 > https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Routing/RouteCompiler.php#L128
 
 ***
 
 ### What is the default status code of a Symfony\Component\HttpFoundation\RedirectResponse object?
-302
+Answer : 302
 > https://www.wikiwand.com/fr/Liste_des_codes_HTTP#/Redirection
 
 ***
 
 ### What is the correct code to activate the tools to help you debug PHP code?
+Answer : 
 ```php
 use Symfony\Component\Debug\Debug;
 
@@ -608,18 +646,19 @@ Debug::enable();
 ***
 
 ### What is the purpose of the logging: true option in the translator config?
-Log a message when Symfony doesn't find a translation for the given locale.
+Answer : Log a message when Symfony doesn't find a translation for the given locale.
 > http://symfony.com/doc/current/reference/configuration/framework.html#logging
 
 *** 
 
 ### Is it possible to add a listener to several events?
-Yes
+Answer : Yes
 > http://symfony.com/doc/current/components/event_dispatcher/introduction.html#connecting-listeners
 
 ***
 
 ### What is the way to destroy a variable in a PHP session?
+Answer : 
 - unset() on the variable in $_SESSION
 - ~~session_destroy()~~
 - ~~session_unset()~~
@@ -636,7 +675,7 @@ Yes
 ***
 
 ### How you validate an object but only against a subset of the constraints ?
-Using validation groups.
+Answer : Using validation groups.
 > http://symfony.com/doc/current/validation/groups.html
 
 ***
@@ -654,7 +693,7 @@ Answer :
 ***
 
 ### When using HTTP basic, how does the server starts the authentication process?
-Sending the WWW-Authenticate HTTP header with the HTTP 401 Not Authorized status code.
+Answer : Sending the WWW-Authenticate HTTP header with the HTTP 401 Not Authorized status code.
 
 *** 
 

@@ -585,6 +585,7 @@ $collection->add('blog_show', new Route('/blog/{page}/category/{slug}/{page}', a
 return $collection;
 ```
 No
+
 An exception is thrown : Route pattern "/blob/{page}/category/{slug}/{page}" cannot reference variable name "page" more than once.
 > https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Routing/RouteCompiler.php#L128
 

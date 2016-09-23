@@ -2,7 +2,7 @@ University Sensiolabs - Reminder
 ================================
 
 ### What is the attribute in the definition of a route setting the locale of a user?
-_locale
+Answer : _locale
 
 ***
 

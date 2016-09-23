@@ -758,7 +758,7 @@ $options = array(
 
 ***
 
-### What will be the result of the following code?
+### Magic __call() Method : What will be the result of the following code?
 ```php
 class Person
 {

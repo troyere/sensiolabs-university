@@ -756,4 +756,41 @@ $options = array(
 ```
 > http://symfony.com/doc/current/components/options_resolver.html#default-values-that-depend-on-another-option
 
+***
 
+### What will be the result of the following code?
+```php
+class Person
+{
+    private $children = array(
+        'wouter' => 'Wouter',
+    );
+
+    public function __call($name, $args)
+    {
+        $property = lcfirst(substr($name, 3));
+        if ('get' === substr($name, 0, 3)) {
+            return isset($this->children[$property])
+                ? $this->children[$property]
+                : null;
+        } elseif ('set' === substr($name, 0, 3)) {
+            $value = 1 == count($args) ? $args[0] : null;
+            $this->children[$property] = $value;
+        }
+    }
+}
+
+$person = new Person();
+
+$accessor = $accessorBuilder->getPropertyAccessor();
+
+$wouter = $accessor->getValue($person, 'wouter');
+```
+- ~~The value of $wouter will be Wouter.~~
+- ~~The value of $wouter will be null.~~
+- ~~A Symfony\Component\PropertyAccess\Exception\NoSuchIndexException will be thrown.~~
+- A Symfony\Component\PropertyAccess\Exception\NoSuchPropertyException will be thrown.
+
+> http://symfony.com/doc/current/components/property_access/introduction.html#magic-call-method
+
+***

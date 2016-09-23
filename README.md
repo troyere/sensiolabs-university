@@ -801,3 +801,40 @@ Answer: A required URI scheme or an array of restricted schemes.
 > https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Routing/Route.php#L74-L81
 
 ***
+
+### Ignoring Attributes: What is the correct way to ignore attributes?
+Answer: $normalizer->setIgnoredAttributes(array('age'));
+> http://symfony.com/doc/current/components/serializer.html#ignoring-attributes
+
+***
+
+### Generate a 404 page: How can you generate a 404 response from a controller that extends from the base controller?
+Answer:
+- ~~return \Symfony\Component\HttpKernelInterface::NOT_FOUND;~~
+- throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException('Not found', null);
+- throw $this->createNotFoundException('Not found');
+- ~~$this->generateException(404, 'Not found');~~
+
+> http://symfony.com/doc/current/book/controller.html#managing-errors-and-404-pages
+
+***
+
+### Service definition: With the following service definition how is it possible to access the mailer service?
+```twig
+services:
+    app.mailer.one:
+        class: AppBundle\OneMailer
+        arguments: [sendmail]
+        public: false
+
+    app.mailer
+        alias: app.mailer.one
+```
+Answer: 
+```php
+$container->get('app.mailer');
+```
+> http://symfony.com/doc/current/components/dependency_injection/advanced.html#aliasing
+
+***
+

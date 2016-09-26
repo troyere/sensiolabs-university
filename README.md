@@ -838,3 +838,15 @@ $container->get('app.mailer');
 
 ***
 
+### Which of these are valid block?
+- ~~{% block content 'content' block %}~~
+- ~~{% block content 'content' %}
+- ~~{% startblock content %} content {% finishblock content %}~~
+- ~~{% startblock content %} content {% endblock content %}~~
+- {% block content %} content {% endblock %}
+- ~~{% block content %} content {% endblock content %}~~
+- ~~{% block content %} content {% finishblock content %}~~
+
+> http://twig.sensiolabs.org/doc/functions/block.html
+
+***

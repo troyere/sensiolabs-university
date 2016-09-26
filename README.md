@@ -895,6 +895,7 @@ Answer:
 ***
 
 ### Functions arguments: What are the ways to get the third argument passed to a function?
+Answer:
 - func_get_args()
 - ~~func_get_arg(3)~~
 - ~~$argv[2]~~
@@ -908,6 +909,7 @@ Answer:
 ***
 
 ### Loading type: Which type of loader is not supported by Symfony?
+Answer:
 - Closure
 - PHP
 - ~~INI~~
@@ -918,6 +920,7 @@ Answer:
 ***
 
 ### HTTP Cache: Which of these HTTP headers tell a reverse proxy cache like Varnish to cache the response it receives during 90 minutes or more?
+Answer:
 - ~~Cache-Control: public, s-maxage=90~~
 - ~~Cache-Control: public~~
 - ~~Cache-Control: private, maxage=324000~~
@@ -931,3 +934,11 @@ Answer:
 > http://stackoverflow.com/questions/15971747/does-it-make-sense-to-have-max-age-and-s-maxage-in-the-cache-control-http-header#answer-15972973
 
 ***
+
+### Construct a route in PHP: When declaring a route in PHP, what is the 7th argument of the constructor of the Route class?
+Answer: The required HTTP methods.
+> https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Routing/Route.php#L74-L81
+
+***
+
+

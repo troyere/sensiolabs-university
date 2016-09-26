@@ -838,9 +838,10 @@ $container->get('app.mailer');
 
 ***
 
-### Which of these are valid block?
+### Twig block: Which of these are valid block?
+Answer:
 - ~~{% block content 'content' block %}~~
-- ~~{% block content 'content' %}
+- ~~{% block content 'content' %}~~
 - ~~{% startblock content %} content {% finishblock content %}~~
 - ~~{% startblock content %} content {% endblock content %}~~
 - {% block content %} content {% endblock %}
@@ -848,5 +849,85 @@ $container->get('app.mailer');
 - ~~{% block content %} content {% finishblock content %}~~
 
 > http://twig.sensiolabs.org/doc/functions/block.html
+
+***
+
+### PHP birth: In which year was born PHP?
+Answer: 1995
+> http://php.net/manual/en/history.php.php
+
+***
+
+### PropertyAccess Component - Reading from Arrays: What will be the result of the following code?
+```php
+use Symfony\Component\PropertyAccess\PropertyAccess;
+
+$accessor = PropertyAccess::createPropertyAccessor();
+
+$person = array(
+    'first_name' => 'Wouter',
+);
+
+$age = $accessor->getValue($person, '[age]');
+```
+Answer:
+- ~~The value of $age will be 0.~~
+- ~~A Symfony\Component\PropertyAccess\Exception\NoSuchIndexException will be thrown.~~
+- ~~A Symfony\Component\PropertyAccess\Exception\NoSuchPropertyException will be thrown.~~
+- The value of $age will be null.
+
+> http://symfony.com/doc/current/components/property_access/introduction.html#reading-from-arrays
+> 
+> https://github.com/symfony/symfony/blob/master/src/Symfony/Component/PropertyAccess/PropertyAccessorBuilder.php#L70-L83
+
+***
+
+### Validator Component - Validation constraints: Which of the following elements can contain validation constraints?
+Answer:
+- Private and protected properties
+- ~~Public getters/issers~~
+- Public properties
+- ~~Classes~~
+- ~~Private and protected getters/issers~~
+
+> http://symfony.com/doc/current/reference/constraints.html
+
+***
+
+### Functions arguments: What are the ways to get the third argument passed to a function?
+- func_get_args()
+- ~~func_get_arg(3)~~
+- ~~$argv[2]~~
+- ~~$argv[3]~~
+- func_get_arg(2)
+
+> http://php.net/manual/en/function.func-get-arg.php
+> 
+> http://php.net/manual/en/function.func-get-args.php
+
+***
+
+### Loading type: Which type of loader is not supported by Symfony?
+- Closure
+- PHP
+- ~~INI~~
+- YML
+
+> https://github.com/symfony/symfony/tree/3.0/src/Symfony/Component/Routing/Loader
+
+***
+
+### HTTP Cache: Which of these HTTP headers tell a reverse proxy cache like Varnish to cache the response it receives during 90 minutes or more?
+- ~~Cache-Control: public, s-maxage=90~~
+- ~~Cache-Control: public~~
+- ~~Cache-Control: private, maxage=324000~~
+- Cache-Control: public, s-maxage=324000
+- ~~Cache-Control: private, maxage=90~~
+
+> https://tools.ietf.org/html/rfc2616
+> 
+> http://stackoverflow.com/questions/3492319/private-vs-public-in-cache-control#answer-3492459
+>
+> http://stackoverflow.com/questions/15971747/does-it-make-sense-to-have-max-age-and-s-maxage-in-the-cache-control-http-header#answer-15972973
 
 ***

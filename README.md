@@ -941,4 +941,40 @@ Answer: The required HTTP methods.
 
 ***
 
+### PHP Configuration: How can you get the value of the current configuration directives (php.ini) of a PHP extension?
+Answer:
+- With the reflection API
+- With ini_get_all()
+- ~~With get_loaded_extensions()~~
+- ~~With php://config stream~~
+- ~~With the $GLOBALS array~~
+
+> http://php.net/manual/en/function.ini-get-all.php
+> 
+> http://php.net/manual/en/reflectionextension.getinientries.php
+>
+> http://php.net/manual/en/function.get-loaded-extensions.php
+
+***
+
+### Twig Strict Variables Mode: Consider the following Twig code snippet:
+```twig
+The {{ color }} car!
+```
+### What will be the result of evaluating this template when passing it the blue for the color variable value and when the strict_variables global setting is on?
+Answer: The template will be succesfully evaluated and the string The blue car! will be displayed in the web browser.
+> https://github.com/twigphp/Twig/blob/1.x/lib/Twig/Environment.php#L78
+
+*** 
+
+### Twig internals: Which of the following Twig internal objects is responsible for transforming an AST (Abstract Syntax Tree) into PHP code?
+- The Environment
+- The Lexer
+- The Compiler
+- The Parser
+
+> http://twig.sensiolabs.org/doc/internals.html
+
+*** 
+
 

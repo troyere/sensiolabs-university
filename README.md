@@ -977,4 +977,14 @@ Answer: The template will be succesfully evaluated and the string The blue car! 
 
 *** 
 
+###  Functional Test: What is the class to extends in a Symfony functional test class?
+- Symfony\Bundle\FrameworkBundle\Test\WebTestCase
+- ~~Symfony\Bundle\FrameworkBundle\Test\Functional\WebTestCase~~
+- ~~Symfony\Component\Test\FunctionalTestCase~~
+- ~~Symfony\Component\Test\WebTestCase~~
+- ~~Symfony\Bundle\FrameworkBundle\Test\FunctionalTestCase~~
+
+> http://symfony.com/doc/current/book/testing.html#your-first-functional-test
+
+***
 

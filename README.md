@@ -988,3 +988,20 @@ Answer: The template will be succesfully evaluated and the string The blue car! 
 
 ***
 
+
+
+
+Première journée de formation : Security Component + Event Listeners
+
+Security Component
+
+Version minimum a étudier : > 2.6
+
+Le Security Component est stand alone. 
+
+Avec Symfony, on utilise ce composant par le biai du bridge 
+
+
+
+
+
